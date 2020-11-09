@@ -22,7 +22,7 @@ function init()
       if(combo == codes.length)
       {
         combo = 0;
-        alert("Congratulations!");
+        alert("Hurray");
       }
     }else{
       combo = 0;
