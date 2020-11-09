@@ -11,24 +11,21 @@ const codes = [
   "a"
 ];
 
-
-function init() {
-  var num = 0;
-  function callback(e)
-  {
-    const key = e.key
-    if(key == codes[num])
+function init()
+{
+  document.body.addEventListener("keydown", (event) => {
+    var keyPressed = event.key;
+    var combo = 0;
+    if(keyPressed == codes[combo])
     {
-      num += 1;
-      if(num == codes.length)
+      combo++;
+      if(combo == codes.length)
       {
-        window.alert('Hurray')
-        num = 0;
+        combo = 0;
+        alert("Congratulations!");
       }
     }else{
-      num = 0;
+      combo = 0;
     }
-  }
-
-  document.body.addEventListener("keydown", callback)
+  })
 }
