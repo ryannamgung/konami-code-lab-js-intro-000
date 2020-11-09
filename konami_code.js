@@ -13,9 +13,9 @@ const codes = [
 
 function init()
 {
+  var combo = 0;
   document.body.addEventListener("keydown", (event) => {
     var keyPressed = event.key;
-    var combo = 0;
     if(keyPressed == codes[combo])
     {
       combo++;
